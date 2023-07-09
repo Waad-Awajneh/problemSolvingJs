@@ -35,28 +35,28 @@ console.log(`Output: [
 
 /************************************************************* */
 
-// const arr1 = [
-// { id: 1, x: 2, y: 3 },
-// { id: 2, x: 3, y: 6 },
-// ]
-// const arr2 = [
-// { id: 2, x: 10, y: 20 },
-// { id: 3, x: 0, y: 0 },
-// ]
+const arr3 = [
+  { id: 1, x: 2, y: 3 },
+  { id: 2, x: 3, y: 6 },
+];
+const arr4 = [
+  { id: 2, x: 10, y: 20 },
+  { id: 3, x: 0, y: 0 },
+];
 
-// console.log(joinArraysById(arr1, arr2))
-// console.log(`Output: [
-// { "id": 1, "x": 2, "y": 3 },
-// { "id": 2, "x": 10, "y": 20 },
-// { "id": 3, "x": 0, "y": 0 }
-// ]`)
+console.log(joinArraysById(arr3, arr4));
+console.log(`Output: [
+{ "id": 1, "x": 2, "y": 3 },
+{ "id": 2, "x": 10, "y": 20 },
+{ "id": 3, "x": 0, "y": 0 }
+]`);
 
 /************************************************************* */
 
-// const arr1 = [{ id: 1, b: { b: 94 }, v: [4, 3], y: 48 }]
-// const arr2 = [{ id: 1, b: { c: 84 }, v: [1, 3] }]
+const arr5 = [{ id: 1, b: { b: 94 }, v: [4, 3], y: 48 }];
+const arr6 = [{ id: 1, b: { c: 84 }, v: [1, 3] }];
 
-// console.log(joinArraysById(arr1, arr2))
-// console.log(`Output: [
-// { "id": 1, "b": { "c": 84 }, "v": [1, 3], "y": 48 }
-// ]`);
+console.log(joinArraysById(arr5, arr6));
+console.log(`Output: [
+{ "id": 1, "b": { "c": 84 }, "v": [1, 3], "y": 48 }
+]`);
