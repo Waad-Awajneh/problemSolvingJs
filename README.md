@@ -665,3 +665,191 @@ const { firstName: fName, lastName: lName } = user;
 console.log(fName); // Outputs: 'John'
 console.log(lName); // Outputs: 'Doe'
 ```
+
+
+
+<pre lang="markdown">
+```markdown
+# 📘 Web Development Interview Questions
+
+This document contains frequently asked interview questions and answers related to **HTML**, **CSS**, **JavaScript**, **React**, **Laravel**, **SQL**, and **Git**. It's designed to serve as a quick reference guide for preparation.
+
+---
+
+## 🟦 HTML
+
+### Q1: What is the difference between `id` and `class` in HTML?
+- `id` is **unique** and used to identify a single element.
+- `class` can be used on **multiple elements** to apply the same styles or behaviors.
+
+### Q2: What is Semantic HTML?
+Semantic HTML uses tags that **clearly describe their meaning** (like `<article>`, `<section>`, `<header>`) making the content more **readable** and **accessible**.
+
+### Q3: What's the difference between block, inline, and inline-block elements?
+- **Block**: Takes full width, starts on a new line (`<div>`, `<section>`, etc.).
+- **Inline**: Takes only as much width as needed, stays in line (`<span>`, `<a>`, etc.).
+- **Inline-block**: Like inline but respects width/height like block elements.
+
+---
+
+## 🎨 CSS
+
+### Q1: What is the difference between `visibility: hidden` and `display: none`?
+- `visibility: hidden`: Element is **invisible** but still takes up space.
+- `display: none`: Element is **removed from the layout** and takes no space.
+
+### Q2: How does `z-index` work in CSS?
+`z-index` controls the **stacking order** of elements. Higher values are displayed **on top** of lower values. It only works on elements with `position` other than `static`.
+
+### Q3: What is the difference between `flex` and `grid`?
+- **Flexbox**: One-dimensional layout (row or column).
+- **Grid**: Two-dimensional layout (rows and columns).
+
+### Q4: How to center a child `div` inside a parent `div`?
+**Horizontally & Vertically** using Flexbox:
+```css
+.parent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+```
+
+### Q5: What is the Box Model?
+The CSS Box Model includes:
+- **Content** – actual content
+- **Padding** – space around content
+- **Border** – border around padding
+- **Margin** – space outside the border
+
+---
+
+## 🟨 JavaScript
+
+### Q1: What is the difference between `var`, `let`, and `const`?
+- `var`: Function-scoped, hoisted.
+- `let`: Block-scoped, not hoisted the same way as `var`.
+- `const`: Block-scoped, value cannot be reassigned.
+
+### Q2: What is hoisting in JavaScript?
+Hoisting is JavaScript's behavior of moving declarations to the top of the current scope during compilation. Only **declarations** are hoisted, not **initializations**.
+
+### Q3: What is a closure?
+A **closure** is a function that remembers variables from its **outer scope**, even after the outer function has returned.
+
+### Q4: What is the difference between `==` and `===`?
+- `==`: Loose equality – performs type coercion.
+- `===`: Strict equality – compares both value and type.
+
+### Q5: What is the event loop?
+The **event loop** handles async code in JavaScript. It:
+- Executes code in the **call stack**.
+- Handles **callbacks** from the **task queue** (like `setTimeout`, `fetch`) after the stack is empty.
+
+---
+
+## ⚛️ React
+
+### Q1: What is the Virtual DOM and how does React use it?
+The Virtual DOM is a **lightweight in-memory representation** of the real DOM. React:
+- Tracks changes efficiently
+- Diffs the new Virtual DOM with the old one
+- Reconciles only the changed parts in the real DOM  
+This improves performance and makes updates faster.
+
+### Q2: What are React hooks? Name at least 3 commonly used ones.
+React Hooks are functions that let you use **state and lifecycle features** in function components.
+
+Common hooks:
+- `useState` – state management
+- `useEffect` – side effects (e.g. data fetching)
+- `useRef` – DOM references or mutable values
+
+Others: `useMemo`, `useCallback`, `useContext`, `useReducer`
+
+### Q3: What are the benefits of using `useMemo` and `useCallback`?
+- `useMemo`: Caches the **result** of a function.
+- `useCallback`: Caches the **function reference**.
+
+Both help prevent **unnecessary re-renders** and **optimize performance**.
+
+### Q4: What are keys in React and why are they important in lists?
+Keys help React identify which items have changed or been removed.
+
+- Should be **unique** and **stable**.
+- Avoid using array indexes if the list can change.
+
+---
+
+## 🟫 Laravel
+
+### Q1: What is middleware in Laravel?
+Middleware filters HTTP requests. It can be used for:
+- Authentication
+- Logging
+- Request modification  
+It runs **before or after** the controller logic.
+
+### Q2: How does Eloquent ORM work?
+Eloquent is Laravel’s **ORM** that allows interaction with the database using **models**. It provides an **Active Record** implementation.
+
+---
+
+## 🗄 SQL
+
+### Q1: What is the difference between `INNER JOIN`, `LEFT JOIN`, and `RIGHT JOIN`?
+- **INNER JOIN**: Only matching records from both tables.
+- **LEFT JOIN**: All records from the left table + matching from right.
+- **RIGHT JOIN**: All records from the right table + matching from left.
+
+### Q2: How do you improve MySQL query performance?
+- Use **indexes**
+- Avoid `SELECT *`
+- **Normalize** tables
+- Use `EXPLAIN` to analyze queries
+
+### Q3: What is a Primary Key vs. Foreign Key?
+- **Primary Key**: Uniquely identifies each record. Cannot be null.
+- **Foreign Key**: References the primary key in another table, creating a **relationship** between tables.
+
+### Q4: How do `GROUP BY` and `HAVING` work?
+- **GROUP BY**: Groups rows with the same values into summary rows.
+- **HAVING**: Filters grouped results (used with `GROUP BY`).
+
+---
+
+## 🔧 Git
+
+### Q1: What is Git and why is it used?
+Git is a **version control system** used to manage and track changes in code. It allows collaboration, branching, merging, and version history.
+
+### Q2: What is the difference between `git pull` and `git fetch`?
+- `git fetch`: Downloads changes but does **not merge**.
+- `git pull`: Downloads and **merges** the changes into your branch.
+
+### Q3: What is a merge conflict and how do you resolve it?
+A **merge conflict** happens when two branches change the same lines of code. Resolve it by:
+- Manually editing the conflicting file
+- Marking the conflict as resolved
+- Committing the resolved file
+
+### Q4: What is the purpose of `.gitignore`?
+`.gitignore` tells Git which files or folders to **ignore** (not track). Example:
+```
+node_modules/
+.env
+.DS_Store
+```
+
+### Q5: How do you undo a commit?
+- To undo the last commit but keep the changes:  
+  `git reset --soft HEAD~1`
+- To discard the commit and changes:  
+  `git reset --hard HEAD~1`
+
+---
+
+> 🧠 Use this document to quickly brush up on essential concepts for interviews or technical discussions.
+```
+</pre>
+
